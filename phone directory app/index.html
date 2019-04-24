@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div id="app-error">
+            </div>
+            <h1>Phone Book App</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">Add New Contacts</div>
+                <div class="panel-body">
+                    <form class="form-inline" id="addContacts" action="#">
+                        <div class="form-group">
+                            <label for="contactName">Name:</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="ex: John Doe" required maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone:</label>
+                            <input type="number" class="form-control" id="contactPhone" placeholder="ex: 9412631302" required maxlength="10">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="addBtn">Add Contact</button>
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Search Contacts</div>
+                <div class="panel-body">
+                    <form id="searchContacts" action="#">
+                        <input id="searchQuery" type="text" placeholder="ex: John Doe" maxlength="100">
+                        <input id="searchBtn" class="btn btn-xs btn-primary" type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id='app-content'>
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr>
+                    <button id="previousBtn" class="btn btn-sm btn-basic" disabled>Previous</button>
+                    <button id="nextBtn" class="btn btn-sm btn-basic">Next</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
